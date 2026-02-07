@@ -1,5 +1,10 @@
+// app/layout.tsx
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+
+export const metadata = {
+  title: "DEW Solutions",
+  description: "Websites & AI Automation",
+};
 
 export default function RootLayout({
   children,
@@ -8,10 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-      </body>
+      <body style={{ margin: 0 }}>{children}</body>
     </html>
   );
 }
