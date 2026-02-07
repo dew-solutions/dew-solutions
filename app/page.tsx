@@ -178,46 +178,46 @@ export default function Home() {
         © {new Date().getFullYear()} DEW Solutions
       </footer>
       {/* CONTACT INFO / FOOTER */}
-<section
-  style={{
-    backgroundColor: "#000",
-    color: "#fff",
-    padding: "60px 20px",
-    textAlign: "center",
-  }}
->
-  <h2 style={{ fontSize: 32, marginBottom: 20 }}>
-    Get in Touch
-  </h2>
+         <section
+           style={{
+              backgroundColor: "#000",
+              color: "#fff",
+              padding: "60px 20px",
+              textAlign: "center",
+            }}
+          >
+            <h2 style={{ fontSize: 32, marginBottom: 20 }}>
+               Get in Touch
+             </h2>
 
-  <p style={{ fontSize: 18, marginBottom: 10 }}>
-    📞{" "}
-    <a
-      href="tel:+16107518710"
-      style={{ color: "#fff", textDecoration: "underline" }}
-    >
-      +1 (610) 751-8710
-    </a>
-  </p>
+            <p style={{ fontSize: 18, marginBottom: 10 }}>
+             📞{" "}
+            <a
+               href="tel:+16107518710"
+               style={{ color: "#fff", textDecoration: "underline" }}
+             >
+               +1 (610) 751-8710
+            </a>
+        </p>
 
-  <p style={{ fontSize: 18, marginBottom: 10 }}>
-    📧{" "}
-    <a
-      href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM"
-      style={{ color: "#fff", textDecoration: "underline" }}
-    >
-      DEWSOLUTIONSOWNER@GMAIL.COM
-    </a>
-  </p>
+         <p style={{ fontSize: 18, marginBottom: 10 }}>
+           📧{" "}
+          <a
+             href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM"
+            style={{ color: "#fff", textDecoration: "underline" }}
+          >
+             DEWSOLUTIONSOWNER@GMAIL.COM
+          </a>
+        </p>
 
-  <p style={{ fontSize: 18, marginBottom: 30 }}>
-    🕘 Operating Hours: 9:00 AM – 6:00 PM (EST)
-  </p>
+        <p style={{ fontSize: 18, marginBottom: 30 }}>
+          🕘 Operating Hours: 9:00 AM – 6:00 PM (EST)
+        </p>
 
-  <p style={{ fontSize: 14, color: "#aaa" }}>
-    © {new Date().getFullYear()} DEW Solutions. All rights reserved.
-  </p>
-</section>
+       <p style={{ fontSize: 14, color: "#aaa" }}>
+           © {new Date().getFullYear()} DEW Solutions. All rights reserved.
+        </p>
+     </section>
     </main>
   );
 }
