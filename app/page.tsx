@@ -13,6 +13,11 @@ export const metadata = {
     "small business automation",
     "AI chatbot services",
     "custom websites for small business",
+    "lead generation services",
+    "websites for local businesses",
+    "DEW solutions clermont fl",
+    "DEW solutions augusta ga",
+
   ],
   openGraph: {
     title:
