@@ -1,232 +1,152 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  Calendar,
+  Cpu,
+  Globe,
+  Bot,
+} from "lucide-react";
+
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", margin: 0 }}>
-
-      {/* ANIMATED BACKGROUND STYLES */}
-      <style>{`
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
-
-      {/* NAVBAR */}
-      <header
-        style={{
-          background: "linear-gradient(270deg, #000, #111, #000)",
-          backgroundSize: "400% 400%",
-          animation: "gradientMove 18s ease infinite",
-          color: "#fff",
-          padding: "20px 32px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ margin: 0, fontSize: "22px" }}>DEW Solutions</h1>
-
-        <div style={{ display: "flex", gap: "12px" }}>
-          <a
-            href="tel:+16107518710"
-            style={{
-              padding: "10px 16px",
-              border: "1px solid #fff",
-              borderRadius: "999px",
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Call Now
-          </a>
-
-          <a
-            href="https://cal.com/dew-solutions/demo-meeting"
-            target="_blank"
-            style={{
-              padding: "10px 16px",
-              backgroundColor: "#2563eb",
-              borderRadius: "999px",
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Book Demo
-          </a>
-        </div>
-      </header>
-
+    <main className="bg-black text-white overflow-hidden">
+      
       {/* HERO */}
-      <section
-        style={{
-          background: "linear-gradient(270deg, #000, #111, #000)",
-          backgroundSize: "400% 400%",
-          animation: "gradientMove 18s ease infinite",
-          color: "#fff",
-          padding: "100px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "44px", maxWidth: "900px", margin: "0 auto" }}>
-          Websites & AI Automation Built to Grow Your Business
-        </h2>
-
-        <p
-          style={{
-            maxWidth: "700px",
-            margin: "24px auto",
-            fontSize: "18px",
-            color: "#ccc",
-          }}
+      <section className="relative min-h-screen flex items-center justify-center px-6">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-cyan-500/20 animate-pulse" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 max-w-4xl text-center"
         >
-          DEW Solutions helps businesses generate more leads, save time, and
-          scale operations through modern websites and intelligent automation.
-        </p>
+          <h1 className="text-4xl md:text-6xl font-bold">
+            Websites & AI Solutions That Work While You Sleep
+          </h1>
+          <p className="mt-6 text-gray-300 text-lg">
+            We build high-performance websites and AI automations that generate
+            leads, book appointments, and scale your business.
+          </p>
 
-        <div style={{ marginTop: "36px" }}>
-          <a
-            href="tel:+16107518710"
-            style={{
-              padding: "14px 24px",
-              backgroundColor: "#fff",
-              color: "#000",
-              textDecoration: "none",
-              marginRight: "14px",
-              borderRadius: "999px",
-              fontWeight: 700,
-            }}
-          >
-            Call Now
-          </a>
-
-          <a
-            href="https://cal.com/dew-solutions/demo-meeting"
-            target="_blank"
-            style={{
-              padding: "14px 24px",
-              backgroundColor: "#2563eb",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: "999px",
-              fontWeight: 700,
-            }}
-          >
-            Book a Free Demo
-          </a>
-        </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <a
+              href="#book"
+              className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:scale-105 transition"
+            >
+              Book a Free Strategy Call
+            </a>
+            <a
+              href="#services"
+              className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition"
+            >
+              View Services
+            </a>
+          </div>
+        </motion.div>
       </section>
 
       {/* SERVICES */}
-      <section
-        style={{
-          padding: "90px 20px",
-          textAlign: "center",
-          backgroundColor: "#fff",
-        }}
-      >
-        <h3 style={{ fontSize: "34px", marginBottom: "50px" }}>
-          What We Do
-        </h3>
+      <section id="services" className="py-24 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+          What We Build
+        </h2>
 
-        <div
-          style={{
-            maxWidth: "1000px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "28px",
-          }}
-        >
-          <div style={{ border: "1px solid #eee", padding: "28px" }}>
-            <h4>Website Design</h4>
-            <p>
-              Clean, modern, mobile-friendly websites designed to convert
-              visitors into customers.
-            </p>
-          </div>
-
-          <div style={{ border: "1px solid #eee", padding: "28px" }}>
-            <h4>AI Automation</h4>
-            <p>
-              AI chatbots, automations, and workflows that handle leads,
-              scheduling, and follow-ups automatically.
-            </p>
-          </div>
-
-          <div style={{ border: "1px solid #eee", padding: "28px" }}>
-            <h4>Lead Generation</h4>
-            <p>
-              Funnels and systems that turn traffic into real business
-              opportunities.
-            </p>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          {[
+            {
+              icon: <Globe size={32} />,
+              title: "Custom Websites",
+              desc: "Fast, secure, conversion-focused websites built to scale.",
+            },
+            {
+              icon: <Cpu size={32} />,
+              title: "AI Automations",
+              desc: "Automate follow-ups, workflows, and internal operations.",
+            },
+            {
+              icon: <Bot size={32} />,
+              title: "AI Receptionist",
+              desc: "24/7 AI handling calls, bookings, and lead qualification.",
+            },
+          ].map((s, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -6 }}
+              className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur"
+            >
+              <div className="mb-4 text-indigo-400">{s.icon}</div>
+              <h3 className="text-xl font-medium">{s.title}</h3>
+              <p className="text-gray-400 mt-2">{s.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* CALENDAR */}
-      <section
-        style={{
-          padding: "90px 20px",
-          backgroundColor: "#f4f4f4",
-          textAlign: "center",
-        }}
-      >
-        <h3 style={{ fontSize: "34px", marginBottom: "30px" }}>
-          Book a Free Strategy Call
-        </h3>
+      {/* STATS */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            ["24/7", "AI Availability"],
+            ["3–5x", "Faster Lead Response"],
+            ["100%", "Custom Builds"],
+            ["US-Based", "Owner Operated"],
+          ].map(([value, label]) => (
+            <div key={label}>
+              <div className="text-3xl font-bold">{value}</div>
+              <div className="text-gray-400 mt-1">{label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <iframe
-          src="https://cal.com/dew-solutions/demo-meeting"
-          style={{
-            width: "100%",
-            maxWidth: "1000px",
-            height: "700px",
-            border: "none",
-            margin: "0 auto",
-          }}
-        />
+      {/* BOOKING */}
+      <section
+        id="book"
+        className="py-24 px-6 max-w-4xl mx-auto text-center"
+      >
+        <h2 className="text-3xl md:text-4xl font-semibold">
+          Book a Free 15-Minute Strategy Call
+        </h2>
+        <p className="text-gray-400 mt-4">
+          No pressure. No sales script. Just clarity.
+        </p>
+
+        <div className="mt-10 rounded-xl overflow-hidden border border-white/10">
+          <iframe
+            src="https://cal.com/dew-solutions/demo-meeting?overlayCalendar=true"
+            className="w-full h-[600px]"
+          />
+        </div>
       </section>
 
       {/* FOOTER */}
-      <footer
-        style={{
-          backgroundColor: "#000",
-          color: "#fff",
-          padding: "60px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h3 style={{ marginBottom: "24px" }}>Contact Information</h3>
+      <footer className="border-t border-white/10 py-12 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="font-semibold text-lg">DEW Solutions</h3>
+            <p className="text-gray-400 mt-2">
+              Websites and AI systems designed to automate growth.
+            </p>
+          </div>
 
-        <p>
-          📞{" "}
-          <a
-            href="tel:+16107518710"
-            style={{ color: "#fff", textDecoration: "underline" }}
-          >
-            +1 (610) 751-8710
-          </a>
-        </p>
+          <div className="space-y-2">
+            <a href="tel:+16107518710" className="flex items-center gap-2 text-gray-300">
+              <Phone size={16} /> Call Us
+            </a>
+            <a href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM" className="flex items-center gap-2 text-gray-300">
+              <Mail size={16} /> Email Us
+            </a>
+          </div>
 
-        <p>
-          📧{" "}
-          <a
-            href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM"
-            style={{ color: "#fff", textDecoration: "underline" }}
-          >
-            DEWSOLUTIONSOWNER@GMAIL.COM
-          </a>
-        </p>
-
-        <p>🕘 Operating Hours: 9:00 AM – 6:00 PM (EST)</p>
-
-        <p style={{ marginTop: "30px", fontSize: "14px", color: "#aaa" }}>
-          © {new Date().getFullYear()} DEW Solutions
-        </p>
+          <div className="text-gray-400">
+            <p>Mon – Fri</p>
+            <p>9:00 AM – 5:00 PM EST</p>
+          </div>
+        </div>
       </footer>
-
     </main>
   );
 }
