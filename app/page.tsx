@@ -188,7 +188,7 @@ export default function Home() {
               color: "#d1d5db",
             }}
           >
-            DEW Solutions helps Orlando-area businesses generate more leads,
+            DEW Solutions helps businesses generate more leads,
             save time, and scale operations using modern websites and
             intelligent automation.
           </p>
