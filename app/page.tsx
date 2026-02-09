@@ -36,35 +36,57 @@ export default function Home() {
 
       {/* GLOBAL STYLES */}
       <style>{`
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
+      @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+       50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
 
-        @keyframes gridMove {
-          from { background-position: 0 0; }
-          to { background-position: 40px 40px; }
-        }
+      @keyframes gridMove {
+        from { background-position: 0 0; }
+        to { background-position: 40px 40px; }
+      }
 
-        .hoverLift {
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
+      body {
+        background-color: #000;
+      }
 
-        .hoverLift:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 14px 32px rgba(0,0,0,0.18);
-        }
+     .noise {
+       position: absolute;
+       inset: 0;
+       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+       pointer-events: none;
+     }
 
-        a.button {
-          transition: transform 0.2s ease, opacity 0.2s ease;
-        }
+     .divider {
+        height: 1px;
+        width: 100%;
+       background: linear-gradient(
+         to right,
+         transparent,
+         rgba(255,255,255,0.15),
+         transparent
+       );
+        margin: 80px 0;
+     }
 
-        a.button:hover {
-          transform: translateY(-2px);
-          opacity: 0.9;
-        }
-      `}</style>
+     .card {
+       background: linear-gradient(180deg, #ffffff, #f9fafb);
+       border-radius: 16px;
+       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+     }
+
+     .card-dark {
+       background: linear-gradient(180deg, #111, #050505);
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+     }
+
+      .accent {
+        color: #3b82f6;
+      }
+    `}</style>
 
       {/* NAVBAR */}
       <header
