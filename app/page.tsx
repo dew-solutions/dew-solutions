@@ -2,12 +2,17 @@ export default function Home() {
   return (
     <main style={{ fontFamily: "Arial, sans-serif", margin: 0 }}>
 
-      {/* ANIMATED BACKGROUND STYLES */}
+      {/* GLOBAL STYLES */}
       <style>{`
         @keyframes gradientMove {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gridMove {
+          from { background-position: 0 0; }
+          to { background-position: 40px 40px; }
         }
 
         .hoverLift {
@@ -16,7 +21,7 @@ export default function Home() {
 
         .hoverLift:hover {
           transform: translateY(-6px);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+          box-shadow: 0 14px 32px rgba(0,0,0,0.18);
         }
 
         a.button {
@@ -86,71 +91,138 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
+          position: "relative",
           background: "linear-gradient(270deg, #000, #111, #000)",
           backgroundSize: "400% 400%",
           animation: "gradientMove 18s ease infinite",
           color: "#fff",
-          padding: "120px 20px",
+          padding: "130px 20px",
+          textAlign: "center",
+          overflow: "hidden",
+        }}
+      >
+        {/* GRID + NOISE */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            animation: "gridMove 20s linear infinite",
+            opacity: 0.25,
+          }}
+        />
+
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <h2
+            style={{
+              fontSize: "48px",
+              maxWidth: "900px",
+              margin: "0 auto",
+              lineHeight: 1.15,
+            }}
+          >
+            Websites & AI Automation Built to Grow Your Business
+          </h2>
+
+          <p
+            style={{
+              maxWidth: "720px",
+              margin: "28px auto",
+              fontSize: "19px",
+              color: "#d1d5db",
+            }}
+          >
+            DEW Solutions helps Orlando-area businesses generate more leads,
+            save time, and scale operations using modern websites and
+            intelligent automation.
+          </p>
+
+          <div style={{ marginTop: "42px" }}>
+            <a
+              href="tel:+16107518710"
+              className="button"
+              style={{
+                padding: "15px 26px",
+                backgroundColor: "#fff",
+                color: "#000",
+                textDecoration: "none",
+                marginRight: "14px",
+                borderRadius: "999px",
+                fontWeight: 700,
+                display: "inline-block",
+              }}
+            >
+              Call Now
+            </a>
+
+            <a
+              href="https://cal.com/dew-solutions/demo-meeting"
+              target="_blank"
+              className="button"
+              style={{
+                padding: "15px 26px",
+                backgroundColor: "#2563eb",
+                color: "#fff",
+                textDecoration: "none",
+                borderRadius: "999px",
+                fontWeight: 700,
+                display: "inline-block",
+              }}
+            >
+              Book a Free Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section
+        style={{
+          padding: "100px 20px",
+          backgroundColor: "#fff",
           textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            fontSize: "48px",
-            maxWidth: "900px",
-            margin: "0 auto",
-            lineHeight: 1.15,
-          }}
-        >
-          Websites & AI Automation Built to Grow Your Business
-        </h2>
-
-        <p
-          style={{
-            maxWidth: "720px",
-            margin: "28px auto",
-            fontSize: "19px",
-            color: "#d1d5db",
-          }}
-        >
-          DEW Solutions helps businesses generate more leads, save time, and
-          scale operations through modern websites and intelligent automation.
+        <h3 style={{ fontSize: "36px", marginBottom: "14px" }}>
+          How It Works
+        </h3>
+        <p style={{ color: "#555", marginBottom: "60px" }}>
+          Simple. Transparent. Results-focused.
         </p>
 
-        <div style={{ marginTop: "42px" }}>
-          <a
-            href="tel:+16107518710"
-            className="button"
-            style={{
-              padding: "15px 26px",
-              backgroundColor: "#fff",
-              color: "#000",
-              textDecoration: "none",
-              marginRight: "14px",
-              borderRadius: "999px",
-              fontWeight: 700,
-              display: "inline-block",
-            }}
-          >
-            Call Now
-          </a>
-
-          <a
-            href="https://cal.com/dew-solutions/demo-meeting"
-            target="_blank"
-            className="button"
-            style={{
-              padding: "15px 26px",
-              backgroundColor: "#2563eb",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: "999px",
-              fontWeight: 700,
-              display: "inline-block",
-            }}
-          >
-            Book a Free Demo
-          </a>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "32px",
+          }}
+        >
+          {[
+            ["1. Strategy Call", "We learn about your business, goals, and bottlenecks."],
+            ["2. Build & Automate", "We design your site and automate key workflows."],
+            ["3. Launch & Scale", "You start capturing leads and saving time immediately."],
+          ].map(([title, desc], i) => (
+            <div
+              key={i}
+              className="hoverLift"
+              style={{
+                padding: "36px 28px",
+                borderRadius: "14px",
+                backgroundColor: "#fafafa",
+                border: "1px solid #e5e7eb",
+                textAlign: "left",
+              }}
+            >
+              <h4 style={{ marginBottom: "12px", fontSize: "20px" }}>
+                {title}
+              </h4>
+              <p style={{ color: "#555", lineHeight: 1.6 }}>{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -159,7 +231,7 @@ export default function Home() {
         style={{
           padding: "100px 20px",
           textAlign: "center",
-          backgroundColor: "#fff",
+          backgroundColor: "#f9fafb",
         }}
       >
         <h3 style={{ fontSize: "36px", marginBottom: "14px" }}>
@@ -167,7 +239,7 @@ export default function Home() {
         </h3>
 
         <p style={{ color: "#555", marginBottom: "60px" }}>
-          Simple, effective solutions designed to drive real results.
+          Designed for small businesses, startups, and service providers.
         </p>
 
         <div
@@ -182,18 +254,15 @@ export default function Home() {
           {[
             {
               title: "Website Design",
-              desc:
-                "Clean, modern, mobile-friendly websites designed to convert visitors into customers.",
+              desc: "High-conversion websites built for speed, clarity, and trust.",
             },
             {
               title: "AI Automation",
-              desc:
-                "AI chatbots and automations that handle leads, scheduling, and follow-ups automatically.",
+              desc: "Automated follow-ups, booking, and lead handling.",
             },
             {
               title: "Lead Generation",
-              desc:
-                "Funnels and systems that turn traffic into real business opportunities.",
+              desc: "Funnels and systems that turn traffic into real opportunities.",
             },
           ].map((service, i) => (
             <div
@@ -203,7 +272,7 @@ export default function Home() {
                 border: "1px solid #e5e7eb",
                 padding: "34px 28px",
                 borderRadius: "14px",
-                backgroundColor: "#fafafa",
+                backgroundColor: "#fff",
                 textAlign: "left",
               }}
             >
@@ -231,7 +300,7 @@ export default function Home() {
         </h3>
 
         <p style={{ color: "#555", marginBottom: "40px" }}>
-          No pressure. Just a quick call to see if we’re a good fit.
+          A quick conversation to see if DEW Solutions is right for you.
         </p>
 
         <iframe
@@ -262,20 +331,14 @@ export default function Home() {
 
         <p>
           📞{" "}
-          <a
-            href="tel:+16107518710"
-            style={{ color: "#fff", textDecoration: "underline" }}
-          >
+          <a href="tel:+16107518710" style={{ color: "#fff" }}>
             +1 (610) 751-8710
           </a>
         </p>
 
         <p>
           📧{" "}
-          <a
-            href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM"
-            style={{ color: "#fff", textDecoration: "underline" }}
-          >
+          <a href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM" style={{ color: "#fff" }}>
             DEWSOLUTIONSOWNER@GMAIL.COM
           </a>
         </p>
@@ -288,7 +351,6 @@ export default function Home() {
           © {new Date().getFullYear()} DEW Solutions. All rights reserved.
         </p>
       </footer>
-
     </main>
   );
 }
