@@ -1,3 +1,30 @@
+export const metadata = {
+  title:
+    "AI Automation & Website Design | Clermont FL, Orlando FL, Augusta GA | DEW Solutions",
+  description:
+    "DEW Solutions provides AI automation, custom website design, and lead generation services for businesses in Clermont Florida, Orlando Florida, and Augusta Georgia. We help companies generate leads, automate workflows, and grow online.",
+  keywords: [
+    "AI automation Clermont FL",
+    "website design Clermont Florida",
+    "AI automation Orlando FL",
+    "website design Orlando Florida",
+    "AI automation Augusta GA",
+    "website design Augusta Georgia",
+    "small business automation",
+    "AI chatbot services",
+    "custom websites for small business",
+  ],
+  openGraph: {
+    title:
+      "AI Automation & Website Design | Clermont FL, Orlando FL, Augusta GA",
+    description:
+      "Custom websites and AI automation for businesses in Central Florida and Augusta, Georgia.",
+    url: "https://www.dewsolutions.com",
+    siteName: "DEW Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+};
 export default function Home() {
   return (
     <main style={{ fontFamily: "Arial, sans-serif", margin: 0 }}>
