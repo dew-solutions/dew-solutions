@@ -47,9 +47,25 @@ export default function Home() {
         to { background-position: 40px 40px; }
       }
 
-      body {
-        background-color: #000;
-      }
+      export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body
+        style={{
+          margin: 0,
+          backgroundColor: "#000",
+          color: "#fff",
+        }}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
 
      .noise {
        position: absolute;
