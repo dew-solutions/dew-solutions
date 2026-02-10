@@ -1,5 +1,3 @@
-"use client";
-
 export const metadata = {
   title:
     "AI Automation & Website Design | Clermont FL, Orlando FL, Augusta GA | DEW Solutions",
@@ -30,8 +28,14 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", margin: 0, backgroundColor: "#000", color: "#fff" }}>
-
+    <main
+      style={{
+        fontFamily: "Arial, sans-serif",
+        margin: 0,
+        backgroundColor: "#000",
+        color: "#fff",
+      }}
+    >
       {/* GLOBAL STYLES */}
       <style>{`
         @keyframes gradientMove {
@@ -108,12 +112,31 @@ export default function Home() {
         </h1>
 
         <div style={{ display: "flex", gap: "12px" }}>
-          <a href="tel:+16107518710" className="button"
-            style={{ padding: "10px 18px", border: "1px solid #fff", borderRadius: "999px", color: "#fff", textDecoration: "none" }}>
+          <a
+            href="tel:+16107518710"
+            className="button"
+            style={{
+              padding: "10px 18px",
+              border: "1px solid #fff",
+              borderRadius: "999px",
+              color: "#fff",
+              textDecoration: "none",
+            }}
+          >
             Call Now
           </a>
-          <a href="https://cal.com/dew-solutions/demo-meeting" target="_blank" className="button"
-            style={{ padding: "10px 18px", backgroundColor: "#2563eb", borderRadius: "999px", color: "#fff", textDecoration: "none" }}>
+          <a
+            href="https://cal.com/dew-solutions/demo-meeting"
+            target="_blank"
+            className="button"
+            style={{
+              padding: "10px 18px",
+              backgroundColor: "#2563eb",
+              borderRadius: "999px",
+              color: "#fff",
+              textDecoration: "none",
+            }}
+          >
             Book Demo
           </a>
         </div>
@@ -145,59 +168,23 @@ export default function Home() {
 
         <div style={{ position: "relative", zIndex: 2 }}>
           <h2 style={{ fontSize: "48px", maxWidth: "900px", margin: "0 auto" }}>
-            Websites & <span className="accent">AI Automation</span> Built to Grow Your Business
+            Websites & <span className="accent">AI Automation</span> Built to Grow
+            Your Business
           </h2>
 
-          <p style={{ maxWidth: "720px", margin: "28px auto", fontSize: "19px", color: "#d1d5db" }}>
-            Serving Clermont FL, Orlando FL, and Augusta GA with modern websites and AI systems that generate leads and save time.
+          <p
+            style={{
+              maxWidth: "720px",
+              margin: "28px auto",
+              fontSize: "19px",
+              color: "#d1d5db",
+            }}
+          >
+            Serving Clermont FL, Orlando FL, and Augusta GA with modern websites
+            and AI systems that generate leads and save time.
           </p>
-
-          <div style={{ marginTop: "42px" }}>
-            <a href="tel:+16107518710" className="button"
-              style={{ padding: "15px 26px", backgroundColor: "#fff", color: "#000", borderRadius: "999px", fontWeight: 700, marginRight: "14px", textDecoration: "none" }}>
-              Call Now
-            </a>
-            <a href="https://cal.com/dew-solutions/demo-meeting" target="_blank" className="button"
-              style={{ padding: "15px 26px", backgroundColor: "#2563eb", color: "#fff", borderRadius: "999px", fontWeight: 700, textDecoration: "none" }}>
-              Book a Free Demo
-            </a>
-          </div>
         </div>
       </section>
-
-      <div className="divider" />
-
-      {/* SERVICES */}
-      <section style={{ padding: "100px 20px", backgroundColor: "#fff", color: "#000", textAlign: "center" }}>
-        <h3 style={{ fontSize: "36px" }}>What We Do</h3>
-        <p style={{ color: "#555", marginBottom: "60px" }}>
-          High-impact digital systems built for growth.
-        </p>
-
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "32px" }}>
-          {[
-            ["Website Design", "Fast, modern websites designed to convert visitors into customers."],
-            ["AI Automation", "AI chatbots and automations that work 24/7 for your business."],
-            ["Lead Generation", "Funnels and systems that turn traffic into real opportunities."],
-          ].map(([title, desc], i) => (
-            <div key={i} className="hoverLift"
-              style={{ padding: "36px 28px", borderRadius: "16px", backgroundColor: "#fafafa", border: "1px solid #e5e7eb", textAlign: "left" }}>
-              <h4>{title}</h4>
-              <p style={{ color: "#555", lineHeight: 1.6 }}>{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer style={{ backgroundColor: "#000", padding: "70px 20px", textAlign: "center" }}>
-        <p>📞 <a href="tel:+16107518710" style={{ color: "#fff" }}>+1 (610) 751-8710</a></p>
-        <p>📧 <a href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM" style={{ color: "#fff" }}>DEWSOLUTIONSOWNER@GMAIL.COM</a></p>
-        <p style={{ color: "#aaa", marginTop: "24px" }}>
-          © {new Date().getFullYear()} DEW Solutions
-        </p>
-      </footer>
-
     </main>
   );
 }
