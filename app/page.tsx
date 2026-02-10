@@ -28,14 +28,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main
-      style={{
-        fontFamily: "Arial, sans-serif",
-        margin: 0,
-        backgroundColor: "#000",
-        color: "#fff",
-      }}
-    >
+    <main style={{ fontFamily: "Arial, sans-serif", margin: 0 }}>
+
       {/* GLOBAL STYLES */}
       <style>{`
         @keyframes gradientMove {
@@ -98,45 +92,25 @@ export default function Home() {
           background: "linear-gradient(270deg, #000, #111, #000)",
           backgroundSize: "400% 400%",
           animation: "gradientMove 18s ease infinite",
+          color: "#fff",
           padding: "20px 32px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           position: "sticky",
           top: 0,
-          zIndex: 20,
+          zIndex: 10,
         }}
       >
-        <h1 style={{ margin: 0, fontSize: "22px", fontWeight: 700 }}>
-          DEW Solutions
-        </h1>
+        <h1 style={{ margin: 0, fontSize: "22px" }}>DEW Solutions</h1>
 
         <div style={{ display: "flex", gap: "12px" }}>
-          <a
-            href="tel:+16107518710"
-            className="button"
-            style={{
-              padding: "10px 18px",
-              border: "1px solid #fff",
-              borderRadius: "999px",
-              color: "#fff",
-              textDecoration: "none",
-            }}
-          >
+          <a href="tel:+16107518710" className="button"
+            style={{ padding: "10px 18px", border: "1px solid #fff", borderRadius: "999px", color: "#fff", textDecoration: "none" }}>
             Call Now
           </a>
-          <a
-            href="https://cal.com/dew-solutions/demo-meeting"
-            target="_blank"
-            className="button"
-            style={{
-              padding: "10px 18px",
-              backgroundColor: "#2563eb",
-              borderRadius: "999px",
-              color: "#fff",
-              textDecoration: "none",
-            }}
-          >
+          <a href="https://cal.com/dew-solutions/demo-meeting" target="_blank" className="button"
+            style={{ padding: "10px 18px", backgroundColor: "#2563eb", borderRadius: "999px", color: "#fff", textDecoration: "none" }}>
             Book Demo
           </a>
         </div>
@@ -149,42 +123,79 @@ export default function Home() {
           background: "linear-gradient(270deg, #000, #111, #000)",
           backgroundSize: "400% 400%",
           animation: "gradientMove 18s ease infinite",
-          padding: "140px 20px",
+          color: "#fff",
+          padding: "130px 20px",
           textAlign: "center",
           overflow: "hidden",
         }}
       >
         <div className="noise" />
-
         <div
           style={{
             position: "absolute",
             inset: 0,
             background:
               "radial-gradient(600px at 50% 30%, rgba(59,130,246,0.25), transparent 60%)",
-            zIndex: 0,
           }}
         />
-
         <div style={{ position: "relative", zIndex: 2 }}>
           <h2 style={{ fontSize: "48px", maxWidth: "900px", margin: "0 auto" }}>
-            Websites & <span className="accent">AI Automation</span> Built to Grow
-            Your Business
+            Websites & <span className="accent">AI Automation</span> Built to Grow Your Business
           </h2>
-
-          <p
-            style={{
-              maxWidth: "720px",
-              margin: "28px auto",
-              fontSize: "19px",
-              color: "#d1d5db",
-            }}
-          >
-            Serving Clermont FL, Orlando FL, and Augusta GA with modern websites
-            and AI systems that generate leads and save time.
+          <p style={{ maxWidth: "720px", margin: "28px auto", fontSize: "19px", color: "#d1d5db" }}>
+            Serving Clermont FL, Orlando FL, and Augusta GA with modern websites and AI systems.
           </p>
         </div>
       </section>
+
+      <div className="divider" />
+
+      {/* HOW IT WORKS */}
+      <section style={{ padding: "100px 20px", backgroundColor: "#fff", color: "#000", textAlign: "center" }}>
+        <h3 style={{ fontSize: "36px" }}>How It Works</h3>
+        <p style={{ color: "#555", marginBottom: "60px" }}>Simple. Transparent. Results-focused.</p>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "32px" }}>
+          {[
+            ["1. Strategy Call", "We learn your goals and challenges."],
+            ["2. Build & Automate", "We design and automate your systems."],
+            ["3. Launch & Scale", "You capture leads and save time."],
+          ].map(([t, d], i) => (
+            <div key={i} className="hoverLift" style={{ padding: "36px", backgroundColor: "#fafafa", borderRadius: "16px", textAlign: "left" }}>
+              <h4>{t}</h4>
+              <p style={{ color: "#555" }}>{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* SERVICES */}
+      <section style={{ padding: "100px 20px", backgroundColor: "#f9fafb", textAlign: "center" }}>
+        <h3 style={{ fontSize: "36px" }}>What We Do</h3>
+        <p style={{ color: "#555", marginBottom: "60px" }}>
+          Websites and AI systems designed to grow local businesses.
+        </p>
+      </section>
+
+      {/* CALENDAR */}
+      <section style={{ padding: "100px 20px", backgroundColor: "#f4f4f5", textAlign: "center" }}>
+        <h3 style={{ fontSize: "36px" }}>Book a Free Strategy Call</h3>
+        <iframe
+          src="https://cal.com/dew-solutions/demo-meeting"
+          style={{ width: "100%", maxWidth: "1000px", height: "700px", border: "none", borderRadius: "16px" }}
+        />
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ backgroundColor: "#000", color: "#fff", padding: "70px 20px", textAlign: "center" }}>
+        <p>📞 <a href="tel:+16107518710" style={{ color: "#fff" }}>+1 (610) 751-8710</a></p>
+        <p>📧 <a href="mailto:DEWSOLUTIONSOWNER@GMAIL.COM" style={{ color: "#fff" }}>DEWSOLUTIONSOWNER@GMAIL.COM</a></p>
+        <p style={{ color: "#aaa", marginTop: "24px" }}>
+          © {new Date().getFullYear()} DEW Solutions
+        </p>
+      </footer>
+
     </main>
   );
 }
